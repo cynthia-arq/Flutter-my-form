@@ -46,7 +46,11 @@ class EventListState extends State<EventListPage> {
     List<EventCellItem> eventCellItem = <EventCellItem>[];
 
     for (Event event  in result.eventList) {
-      EventCellItem item = EventCellItem(event.category, event.image, event.description);
+      EventCellItem item = EventCellItem(
+          event.category,
+          event.image,
+          event.description,
+          event);
       eventCellItem.add(item);
     }
 
